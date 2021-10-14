@@ -1,0 +1,11 @@
+.App {
+  box-sizing: border-box;
+  text-align: center;
+  max-width: max-content;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  padding: 20px;
+  box-shadow: 2px -2px 5px 1px rgb(150, 150, 150);
+}
