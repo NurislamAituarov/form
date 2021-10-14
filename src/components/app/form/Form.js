@@ -70,18 +70,3 @@ const Form = () => {
 }
 
 export default Form;
-// function onSubmit(e) {
-    //     e.preventDefault()
-    //     const results = new FormData(e.target);
-    //     const obj = {};
-    //     results.forEach((el, i) => obj[i] = el);
-    //     fetch('https://jsonplaceholder.typicode.com/posts', {
-    //         method: "POST",
-    //         headers: {
-    //             'Content-type': 'application/json;charset=utf-8'
-    //         },
-    //         body: JSON.stringify(obj)
-    //     })
-    //         .then(data => data.json())
-    //         .then(arr => console.log(arr))
-    // }
