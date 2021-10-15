@@ -28,3 +28,7 @@ button:hover{
     background-color: black;
     color: white;
 }
+
+.error{
+    color: red;
+}

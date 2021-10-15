@@ -31,21 +31,24 @@ const CustomForm = () => {
                     .required('Необходима согласия')
                     .oneOf([true], 'Необходима согласия')
             })}
-            onSubmit={values => console.log(JSON.stringify(values, null, 2))}
+            onSubmit={(values, { resetForm }) => {
+                console.log(JSON.stringify(values, null, 2))
+                resetForm({ values: '' })
+            }}
         >
             <Form>
                 <h2>Отправить пожертвование</h2>
                 <label>Ваше имя</label>
                 <Field className="inp" type="text" name="name" />
-                {<ErrorMessage name="name" component="div" />}
+                {<ErrorMessage className="error" name="name" component="div" />}
 
                 <label>Ваше почта</label>
                 <Field className="inp" type="email" name="email" />
-                {<ErrorMessage name="email" component="div" />}
+                {<ErrorMessage className="error" name="email" component="div" />}
 
                 <label>Количество</label>
                 <Field className="inp" type="number" name="amount" />
-                {<ErrorMessage name="amount" component="div" />}
+                {<ErrorMessage className="error" name="amount" component="div" />}
 
                 <label>Валюта</label>
                 <Field className="inp" name="currency" as="select">
@@ -54,15 +57,15 @@ const CustomForm = () => {
                     <option value="KZT">KZT</option>
                     <option value="RUB">RUB</option>
                 </Field>
-                {<ErrorMessage name="currency" component="div" />}
+                {<ErrorMessage className="error" name="currency" component="div" />}
                 <label>Ваше сообщение</label>
                 <Field className="inp" name="text" as="textarea" />
-                {<ErrorMessage name="text" component="div" />}
+                {<ErrorMessage className="error" name="text" component="div" />}
                 <label>
                     <Field id="radio" type="checkbox" name="terms" />
                     Сошлошаетесь с политикой конфидициальности
                 </label>
-                {<ErrorMessage name="terms" component="div" />}
+                {<ErrorMessage className="error" name="terms" component="div" />}
                 <button type="submit">Отправить</button>
                 <button type="reset">Очистить</button>
             </Form>
