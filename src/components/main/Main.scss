@@ -1,0 +1,42 @@
+main {
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+.title {
+  font-weight: 500;
+  font-size: 28px;
+}
+.block__orders_products {
+  margin-top: 30px;
+}
+
+.block__orders_description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  padding-right: 4%;
+  background-color: rgb(238, 238, 238);
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.block__orders__right {
+  display: flex;
+  p:nth-child(2) {
+    margin-left: 60px;
+  }
+}
+
+.block__orders_selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 15px;
+  padding-bottom: 60px;
+  padding-right: 4%;
+  border-bottom: 2px solid rgba(223, 223, 223, 0.5);
+}
+
+// form/////////////////////////////////
